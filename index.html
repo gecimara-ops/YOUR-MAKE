@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Make | Maquiagens e Acessórios</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff5f7;
+            color: #333333;
+        }
+        
+.produtos {
+    background-color: #ffffff;
+    width: 260px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid #f8dce6;
+    box-shadow: 0 5px 18px rgba(194, 24, 91, 0.09);
+    text-align: center;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produtos:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(194, 24, 91, 0.18);
+    border-color: #e75480;
+}
+
+.produtos .botao {
+    margin-top: auto;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width:600px) {
+    .lista-produtos {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        gap: 14px;
+        padding: 10px 12px 18px;
+        width: 100%;
+        box-sizing: border-box;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+    .lista-produtos .produtos {
+        display: flex;
+        flex: 0 0 80%;
+        width: 80%;
+        min-width: 80%;
+        box-sizing: border-box;
+        flex-direction: column;
+        scroll-snap-align: start;
+    }
+    .lista-produtos .produtos img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: white;
+}
+
+    .lista-produtos .produtos h3 {
+        font-size: 15px;
+    }
+
+    .lista-produtos .produtos p {
+        font-size: 13px;
+    }
+
+    .lista-produtos .produtos .preco {
+        font-size: 19px;
+    }
+
+
+.produtos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.produtos h3 {
+    color: #c2185b;
+}
+
+.preco {
+    color: #c2185b;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+       header {
+
+background: linear-gradient(rgba(90, 20, 60, 0.35), rgba(90, 20, 60, 0.35)), url("imagens/CABEÇALHO.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-shadow: 2px 3px 5px rgba(100, 0, 40, 0.25);
+    font-family: 'Playfair Display', serif;
+}
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        nav {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+    color: #c2185b;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e75480;
+}
+        main {
+    text-align: center;
+    padding: 40px 20px;
+}
+    
+.botao {
+    display: block;
+    width: 100%;
+    margin: 10px auto 0;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+#inicio .botao {
+    display: inline-block;
+    margin: 10px auto 0;
+}
+.botao-instagram {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 10px 16px;
+    background-color: #a855f7;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.botao-instagram:hover {
+    background-color: #9333ea;
+    transform: scale(1.04);
+}
+    .botao:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+
+}
+footer {
+    background: linear-gradient(135deg, #ad1457, #e75480);
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 14px;
+
+
+}
+
+.barra-pesquisa {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+#pesquisa-produtos {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e5b8cc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.titulo-produtos {
+    text-align: center;
+    margin: 35px auto 25px;
+}
+
+.titulo-produtos h2 {
+    color: #b34d7c;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 0 0 8px;
+}
+
+.titulo-produtos p {
+    color: #9b7184;
+    font-size: 15px;
+    margin: 0;
+}
+
+ </style>
+</head>
+
+<body>
+
+    <header>
+    <h1>YOUR MAKE 💄</h1>
+    <p>Sua beleza, seu estilo!</p>
+    <p>✨ Encontre seus produtos de beleza favoritos ✨</p>
+    
+<div class="barra-pesquisa">
+    <input
+        type="text"
+        id="pesquisa-produtos"
+        placeholder="🔎 Buscar maquiagem ou acessório..."
+    >
+</div>
+
+</header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <main>
+    
+<section id="produtos">
+   <div class="titulo-produtos">
+    <h2>Nossos Produtos</h2>
+    <p>Encontre seus favoritos ✨</p>
+</div>
+
+    <div class="lista-produtos">
+
+        <!-- Produto 1: LABIOS -->
+       <!-- Produto 1: LABIOS -->
+<div class="produtos">
+<img src="imagens/gloss.webp" alt="Gloss, batom e lip tint">
+            <h3>Gloss, Batom, Lip balm</h3>
+            <p>Brilho e beleza para seus lábios!</p>
+           <p class="preco">R$ 10,00</p>
+<a class="botao" href="https://wa.me/5598987005291?text=Ol%C3%A1%21%20Gostaria%20de%20comprar%20Gloss%2C%20Batom%20ou%20Lip%20Balm%20da%20YOUR%20MAKE." target="_blank">Comprar pelo WhatsApp</a>
+        </div>
+
+        <!-- Produto 2: FACE -->
+        <div class="produtos">
+<img src="imagens/rosto.webp" alt="Base, Blush, Contorno">
+            <h3>Base, Blush,Contorno</h3>
+            <p>Um toque de cor para sua maquiagem.</p>
+            <p class="preco">R$ 10,00</p>
+<a class="botao" href="https://wa.me/5598987005291?text=Ol%C3%A1%21%20Gostaria%20de%20comprar%20Blush%2C%20Base%20Corretivo%20Contorno%20da%20YOUR%20MAKE." target="_blank">Comprar pelo WhatsApp</a>
+
+        </div>
+
+        <!-- Produto 3: OLHOS -->
+        <div class="produtos">
+<img class="imagem-olhos" src="imagens/rimel.webp" alt="Rímel, delineador e lápis de olho">            <h3>Delineador, mascara de cilios, lapis de olho</h3>
+            <p>Realce seu olhar!</p>
+            <p class="preco">R$ 10,00</p>
+<a class="botao" href="https://wa.me/5598987005291?text=Ol%C3%A1%21%20Gostaria%20de%20comprar%20L%C3%A1pis%20de%20olho%2C%20Delineador%20ou%20R%C3%ADmel%20da%20YOUR%20MAKE." target="_blank">Comprar pelo WhatsApp</a>
+        </div>
+ <!-- Produto 4: ACESSÓRIOS  -->
+        <div class="produtos">
+<img src="imagens/acessorios.webp" alt="Rimel, Delineador, lapis de olho">
+            <h3>Bolsas, espelhos e pincéis</h3>
+            <p>Acessórios para completar sua rotina de beleza!</p>
+            <p class="preco">R$ 10,00</p>
+
+<a class="botao" href="https://wa.me/5598987005291?text=Ol%C3%A1%21%20Gostaria%20de%20comprar%20acess%C3%B3rios%20da%20YOUR%20MAKE%2C%20como%20bolsas%2C%20espelhos%20ou%20pinc%C3%A9is." target="_blank">Comprar pelo WhatsApp</a>                
+
+        </div>
+        <!-- Produto 5: KITS DE MAQUIAGENS  -->
+        <div class="produtos">
+<img src="imagens/kits.webp" alt="kits, com base, gloss, rimel">
+            <h3>KITS DE MAQUIAGENS BEM SURTIDOS, A PARTIR DE 5 ITENS </h3>
+            <p>Mais economia!</p>
+            <p class="preco">R$ 30,00</p>
+
+<a class="botao" href="https://wa.me/5598987005291?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20os%20kits%20de%20maquiagem%20da%20YOUR%20MAKE%2C%20com%20pelo%20menos%205%20itens." target="_blank">Comprar pelo WhatsApp</a>           
+
+</div>
+        <!--produto 6:ESPONJAS E MAQUIAGENS -->
+        <div class="produtos">
+  <img src="imagens/esponjas.webp" alt="espojas, pinceis">
+
+
+    <h3>Esponjas e pincéis</h3>
+
+    <p>Itens essenciais para sua maquiagem!</p>
+
+    <p class="preco">R$ 8,00</p>
+
+    <a class="botao" href="https://wa.me/5598987005291?text=Ol%C3%A1%21%20Gostaria%20de%20comprar%20esponjas%20e%20pinc%C3%A9is%20da%20YOUR%20MAKE." target="_blank">Comprar pelo WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+        
+<section id="contato">
+<h2>Fale conosco 💗</h2>
+<p>Entre em contato para conhecer nossos produtos.</p>
+<a class="botao-instagram" href="https://www.instagram.com/yourmake.br/" target="_blank">
+📸 Siga a YOUR MAKE no Instagram
+</a>
+</section>
+
+<section id="sobre">
+    <h2>Sobre a YOUR MAKE 💕</h2>
+    <p>TUDO EM ACESSORIOS E MAQUIAGENS PARA MELHORAR SUA AUTOESIMA.</p>
+</section>
+
+</main>
+    
+</main>
+    <footer>
+        <p>© 2026 Your Make — Todos os direitos reservados.</p>
+    </footer>
+
+<script>
+const campoPesquisa = document.getElementById("pesquisa-produtos");
+const produtos = document.querySelectorAll(".lista-produtos .produtos");
+
+campoPesquisa.addEventListener("input", function () {
+    const busca = campoPesquisa.value
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
+
+    produtos.forEach(function (produto) {
+        const textoProduto = produto.textContent
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+
+        produto.style.display = textoProduto.includes(busca)
+            ? ""
+            : "none";
+    });
+});
+</script>
+
+</body>
+
+</html>
